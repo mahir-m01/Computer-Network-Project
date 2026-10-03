@@ -1,0 +1,11 @@
+[Unit]
+Description=CN project Python backend
+After=network.target
+
+[Service]
+EnvironmentFile=/etc/cn-backend.env
+ExecStart=/usr/bin/python3 /opt/cn-backend/app.py
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
